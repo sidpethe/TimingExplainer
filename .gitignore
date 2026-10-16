@@ -1,0 +1,14 @@
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Vercel & build artifacts
+.vercel
+node_modules/
+dist/
+.env*
+!.env.example
+
+# Editor directories
+.vscode/
+.idea/
