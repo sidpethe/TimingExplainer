@@ -1,0 +1,20 @@
+{
+  "name": "timing-explainer",
+  "version": "1.0.0",
+  "description": "An interactive guide to precision timing and optical atomic clocks",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'No build step required for static site'"
+  },
+  "keywords": [
+    "atomic-clocks",
+    "physics",
+    "interactive",
+    "education"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
