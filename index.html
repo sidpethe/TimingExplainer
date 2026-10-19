@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Science of Tick-Tock — How Optical Atomic Clocks Achieve Precision Timing</title>
-  <meta name="description"
-    content="An interactive guide for curious adults: why precise timing matters, how atomic clocks work, and how optical atomic clocks split the second into 429 trillion ticks.">
+  <meta name="description" content="An interactive educational guide: why precise timing matters, how atomic clocks work, and how optical atomic clocks split the second into 429 trillion ticks.">
   <meta name="theme-color" content="#7c3aed">
   <link rel="icon"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%237c3aed'/%3E%3Ccircle cx='16' cy='16' r='3' fill='white'/%3E%3Cellipse cx='16' cy='16' rx='11' ry='4.5' fill='none' stroke='white' stroke-width='1.6'/%3E%3Cellipse cx='16' cy='16' rx='11' ry='4.5' fill='none' stroke='white' stroke-width='1.6' transform='rotate(60 16 16)'/%3E%3C/svg%3E">
@@ -32,7 +31,7 @@
 
   <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#top" id="brand-link">
+      <a class="brand" href="index.html" id="brand-link">
         <span class="brand-mark" aria-hidden="true">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8">
             <circle cx="12" cy="12" r="2.2" fill="#fff" />
@@ -45,14 +44,13 @@
       </a>
       <nav class="main-nav" aria-label="Chapters">
         <ul>
-          <li><a href="#why" id="nav-why">Why</a></li>
-          <li><a href="#clocks" id="nav-clocks">Clocks</a></li>
-          <li><a href="#atoms" id="nav-atoms">Atoms</a></li>
-          <li><a href="#optical" id="nav-optical">Optical</a></li>
-          <li><a href="#inside" id="nav-inside">Inside</a></li>
-          <li><a href="#precision" id="nav-precision">Precision</a></li>
-          <li><a href="#gravity" id="nav-gravity">Gravity</a></li>
-          <li><a href="#quiz" id="nav-quiz">Quiz</a></li>
+          <li><a href="index.html" aria-current="page">Why</a></li>
+          <li><a href="clocks.html">Clocks</a></li>
+          <li><a href="optical.html">Optical</a></li>
+          <li><a href="precision.html">Precision</a></li>
+          <li><a href="sync.html">Losing Sync<span class="nav-new">New</span></a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
         </ul>
       </nav>
       <div class="header-actions">
@@ -74,8 +72,7 @@
   </header>
 
   <main id="main">
-    <!-- ============ HERO ============ -->
-    <section class="hero" id="top" aria-labelledby="hero-title">
+<section class="hero" id="top" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div>
           <span class="eyebrow"><span class="dot" aria-hidden="true"></span>An interactive guide to precision
@@ -91,7 +88,7 @@
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
             </a>
-            <a class="btn btn-ghost" href="#quiz" id="hero-quiz">Test your knowledge</a>
+            <a class="btn btn-ghost" href="quiz.html" id="hero-quiz">Test your knowledge</a>
           </div>
           <div class="hero-meta">
             <div><span class="num">~25 min</span><span class="lbl">Reading time</span></div>
@@ -164,9 +161,67 @@
         </div>
       </div>
     </section>
-
-    <!-- ============ 01 WHY ============ -->
-    <section class="section" id="why" aria-labelledby="why-title">
+    <!-- ============ GUIDE MAP ============ -->
+    <section class="section section-alt" id="chapters" aria-labelledby="map-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Explore the guide</span>
+          <h2 id="map-title">Six chapters in precision time</h2>
+          <p>Read sequentially or jump straight into the labs and simulations that interest you most.</p>
+        </div>
+        <ol class="guide-map reveal">
+          <li>
+            <a href="#why" aria-current="page">
+              <span class="gm-num">Part 01</span>
+              <h3>Why Time Matters</h3>
+              <p>GPS, telecoms, power grids, and high-frequency trading: why a single microsecond error breaks modern networks.</p>
+              <span class="gm-go">Read Chapter 01 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+          </li>
+          <li>
+            <a href="clocks.html">
+              <span class="gm-num">Part 02</span>
+              <h3>Clocks &amp; Atoms</h3>
+              <p>The three parts of every clock, five centuries of precision history, and why atoms make nature's perfect tuning forks.</p>
+              <span class="gm-go">Explore Clocks &amp; Atoms <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+          </li>
+          <li>
+            <a href="optical.html">
+              <span class="gm-num">Part 03</span>
+              <h3>Optical Standards</h3>
+              <p>Visible light ticks 50,000× faster than microwaves. See how scientists cool and trap strontium atoms in laser lattices.</p>
+              <span class="gm-go">Discover Optical Clocks <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+          </li>
+          <li>
+            <a href="precision.html">
+              <span class="gm-num">Part 04</span>
+              <h3>Precision &amp; Spacetime</h3>
+              <p>Clocks that drift once in 40 billion years — and are so sensitive to gravity they measure height shifts of 1 centimetre.</p>
+              <span class="gm-go">Test Gravity &amp; Precision <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+          </li>
+          <li>
+            <a href="sync.html" class="is-new">
+              <span class="gm-num">Part 05 · Simulation</span>
+              <h3>Losing Sync: 5G Towers</h3>
+              <p>Simulate adverse effects when 5G towers lose GPS, see inter-cell collisions, and test portable optical clock holdover.</p>
+              <span class="gm-go">Run 5G Simulations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+          </li>
+          <li>
+            <a href="quiz.html">
+              <span class="gm-num">Part 06</span>
+              <h3>Quiz &amp; Glossary</h3>
+              <p>Consolidate your knowledge with our interactive seven-question quiz and comprehensive plain-English glossary.</p>
+              <span class="gm-go">Take the Quiz <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+          </li>
+        </ol>
+      </div>
+    </section>
+<section class="section" id="why" aria-labelledby="why-title">
       <div class="container">
         <div class="section-head reveal">
           <span class="kicker">Chapter 01</span>
@@ -259,700 +314,21 @@
         </div>
       </div>
     </section>
-
-    <!-- ============ 02 CLOCKS ============ -->
-    <section class="section section-alt" id="clocks" aria-labelledby="clocks-title">
+    <!-- ============ PAGER ============ -->
+    <section class="pager-section">
       <div class="container">
-        <div class="section-head reveal">
-          <span class="kicker">Chapter 02</span>
-          <h2 id="clocks-title">What actually <em>is</em> a clock?</h2>
-          <p>Strip away the hands and the casing, and every clock ever made — from a grandfather clock to an optical
-            atomic clock — has the same three ingredients.</p>
-        </div>
+        <nav class="pager" aria-label="Guide pagination">
 
-        <div class="anatomy reveal">
-          <article class="feature">
-            <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round">
-                <path d="M2 12c2-6 4-6 6 0s4 6 6 0 4-6 6 0" />
-              </svg></div>
-            <h3>An oscillator</h3>
-            <p>Something that repeats regularly: a swinging pendulum, a vibrating quartz crystal, or a wave of light.
-            </p>
-          </article>
-          <article class="feature">
-            <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="6" width="18" height="12" rx="2" />
-                <path d="M7 10v4M11 10v4M15 10v4" />
-              </svg></div>
-            <h3>A counter</h3>
-            <p>Something that counts the repetitions — gears, an electronic circuit, or, for optical clocks, a
-              "frequency comb".</p>
-          </article>
-          <article class="feature">
-            <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="9" />
-                <circle cx="12" cy="12" r="4" />
-                <circle cx="12" cy="12" r="0.5" fill="currentColor" />
-              </svg></div>
-            <h3>A reference</h3>
-            <p>A way to check the oscillator stays true. In atomic clocks, the reference is nature itself: identical
-              atoms.</p>
-          </article>
-        </div>
-
-        <div class="two-col">
-          <div class="prose reveal">
-            <h3 style="font-size:1.6rem">Faster ticks, finer time</h3>
-            <p>The faster your oscillator ticks, the more finely you can slice up time. A pendulum that swings once a
-              second can't tell you much about a millisecond. A quartz watch ticks <strong>32,768 times a
-                second</strong> — much better.</p>
-            <p>Atomic clocks go further. The caesium clocks that define today's second tick over <strong>9
-                billion</strong> times a second. Optical clocks tick around <strong>50,000 times faster still</strong>.
-            </p>
-            <p>The waves on the right are drawn slowed down by different amounts so you can see them. Read the real
-              frequencies beside each one.</p>
-          </div>
-          <div class="reveal">
-            <div class="osc-list" id="osc-list">
-              <div class="osc-row" data-cycles="1" data-tone="pendulum">
-                <div>
-                  <div class="osc-name">Pendulum</div>
-                  <div class="osc-freq">1 tick / second</div>
-                </div>
-                <canvas aria-label="Slow wave representing a pendulum" role="img"></canvas>
-              </div>
-              <div class="osc-row" data-cycles="3" data-tone="quartz">
-                <div>
-                  <div class="osc-name">Quartz crystal</div>
-                  <div class="osc-freq">32,768 / second</div>
-                </div>
-                <canvas aria-label="Faster wave representing a quartz crystal" role="img"></canvas>
-              </div>
-              <div class="osc-row" data-cycles="9" data-tone="caesium">
-                <div>
-                  <div class="osc-name">Caesium atom <small>(microwave)</small></div>
-                  <div class="osc-freq">9,192,631,770 / second</div>
-                </div>
-                <canvas aria-label="Fast wave representing a caesium atomic clock" role="img"></canvas>
-              </div>
-              <div class="osc-row" data-cycles="28" data-tone="optical">
-                <div>
-                  <div class="osc-name">Strontium atom <small>(optical)</small></div>
-                  <div class="osc-freq">429,228,004,229,873 / second</div>
-                </div>
-                <canvas aria-label="Very fast wave representing an optical strontium clock" role="img"></canvas>
-              </div>
-            </div>
-            <div class="scale-facts">
-              <div class="scale-fact"><strong>9,193 km</strong>If each caesium tick were 1 mm wide, one second of ticks
-                would stretch farther than London to Los Angeles.</div>
-              <div class="scale-fact"><strong>429 billion km</strong>One second of strontium ticks at 1 mm each would
-                reach about 70 times farther than Pluto.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Timeline -->
-        <div class="section-head reveal" style="margin-top: clamp(4rem, 8vw, 6rem);">
-          <span class="kicker">A brief history</span>
-          <h2 style="font-size: clamp(1.7rem, 3.2vw, 2.4rem);">Five centuries of better ticking</h2>
-        </div>
-        <ol class="timeline">
-          <li class="tl-item reveal">
-            <div class="tl-card"><span class="tl-year">1656</span>
-              <h3>The pendulum clock</h3>
-              <p>Christiaan Huygens builds the first pendulum clock, cutting errors from about 15 minutes a day to
-                around 15 seconds.</p>
-            </div>
-          </li>
-          <li class="tl-item reveal">
-            <div class="tl-card"><span class="tl-year">1927</span>
-              <h3>Quartz arrives</h3>
-              <p>At Bell Labs, Warren Marrison and J.W. Horton build the first quartz clock, using a crystal that
-                vibrates when electrified.</p>
-            </div>
-          </li>
-          <li class="tl-item reveal">
-            <div class="tl-card"><span class="tl-year">1955</span>
-              <h3>The first caesium clock</h3>
-              <p>Louis Essen and Jack Parry at the UK's National Physical Laboratory build the first practical caesium
-                atomic clock.</p>
-            </div>
-          </li>
-          <li class="tl-item is-key reveal">
-            <div class="tl-card"><span class="tl-year">1967</span>
-              <h3>The atomic second</h3>
-              <p>The second is officially redefined as 9,192,631,770 oscillations of the caesium-133 atom. Earth's
-                rotation is no longer the master clock.</p>
-            </div>
-          </li>
-          <li class="tl-item reveal">
-            <div class="tl-card"><span class="tl-year">1997 &amp; 2005</span>
-              <h3>Two Nobel breakthroughs</h3>
-              <p>Nobel Prizes for laser cooling of atoms (1997) and for the optical frequency comb (2005) supply the key
-                tools for optical clocks.</p>
-            </div>
-          </li>
-          <li class="tl-item reveal">
-            <div class="tl-card"><span class="tl-year">2000s</span>
-              <h3>Optical clocks emerge</h3>
-              <p>Trapped-ion clocks and Hidetoshi Katori's "optical lattice" clocks begin to beat the best caesium
-                standards.</p>
-            </div>
-          </li>
-          <li class="tl-item reveal">
-            <div class="tl-card"><span class="tl-year">2020s</span>
-              <h3>Beyond 10<sup>−18</sup></h3>
-              <p>The best optical clocks reach uncertainties below one part in a billion billion, sensitive enough to
-                feel gravity change over a millimetre.</p>
-            </div>
-          </li>
-          <li class="tl-item is-key reveal">
-            <div class="tl-card"><span class="tl-year">~2030</span>
-              <h3>A new second?</h3>
-              <p>The international metrology community is preparing to redefine the second using optical clocks.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ============ 03 ATOMS ============ -->
-    <section class="section" id="atoms" aria-labelledby="atoms-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="kicker">Chapter 03</span>
-          <h2 id="atoms-title">Atoms: nature's perfect tuning forks</h2>
-          <p>Pendulums wear out and quartz crystals age. But every strontium atom in the universe is identical, and that
-            makes atoms the ultimate timing reference.</p>
-        </div>
-
-        <div class="two-col">
-          <div class="prose reveal">
-            <p>Electrons in an atom can only exist at certain <strong>energy levels</strong>, like rungs on a ladder. To
-              push an electron from one rung up to the next, you must hit it with light of <strong>exactly the right
-                frequency</strong> — not a little more, not a little less.</p>
-            <p>That frequency is fixed by the laws of physics. It doesn't change with age, manufacturer or location. So
-              if you can tune a laser to precisely the frequency that makes atoms jump, <strong>the laser itself becomes
-                your clock's pendulum</strong>.</p>
-            <p>In practice it's a game of "warmer, colder". Scientists shine the laser on the atoms, measure how many
-              jumped, and nudge the laser's frequency to keep that number at its peak. This feedback loop runs
-              continuously, steering the laser onto the atomic resonance.</p>
-
-            <div class="levels">
-              <svg viewBox="0 0 150 140" aria-hidden="true">
-                <line x1="30" y1="28" x2="130" y2="28" stroke="currentColor" stroke-opacity="0.5" stroke-width="2" />
-                <line x1="30" y1="100" x2="130" y2="100" stroke="currentColor" stroke-opacity="0.5" stroke-width="2" />
-                <text x="132" y="24" font-size="10" fill="currentColor" opacity="0.6" text-anchor="end">excited</text>
-                <text x="132" y="116" font-size="10" fill="currentColor" opacity="0.6" text-anchor="end">ground</text>
-                <path class="photon-in" d="M40 64 q5 -7 10 0 t10 0 t10 0" fill="none" stroke="#ef4f5a"
-                  stroke-width="2.5" stroke-linecap="round" />
-                <circle class="electron-jump" cx="90" cy="100" r="7" fill="#7c3aed" />
-              </svg>
-              <p>A photon with exactly the right energy lifts the electron from the ground level to the excited level.
-                Wrong frequency? Nothing happens.</p>
-            </div>
-          </div>
-
-          <div class="lab reveal" id="resonance-lab">
-            <div class="lab-head">
-              <h3 class="lab-title"><span class="lab-badge">Lab 2</span> Tune the laser</h3>
-              <button class="btn btn-ghost btn-sm" type="button" id="auto-lock-btn">Auto-lock</button>
-            </div>
-            <div class="lab-body">
-              <div class="res-canvas-wrap">
-                <canvas id="resonance-canvas" role="img"
-                  aria-label="Graph of atoms excited versus laser frequency, with a narrow peak at the atomic resonance and dots representing atoms"></canvas>
-                <span class="lock-status" id="lock-status">Searching…</span>
-              </div>
-              <div class="control">
-                <div class="control-row">
-                  <label for="detune-slider">Laser frequency offset</label>
-                  <output id="detune-out" for="detune-slider">+32 Hz</output>
-                </div>
-                <input type="range" id="detune-slider" min="-60" max="60" value="32" step="0.5">
-              </div>
-              <div class="readouts">
-                <div class="readout highlight"><span class="r-label">Atoms excited</span><span class="r-value"
-                    id="excited-out">5%</span></div>
-                <div class="readout"><span class="r-label">Laser frequency</span><span class="r-value mono"
-                    id="laser-freq-out" style="font-size:0.95rem">429,228,004,229,905 Hz</span></div>
-              </div>
-              <div class="callout">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M12 16v-4M12 8h.01" />
-                </svg>
-                <p>Notice how <strong>narrow</strong> the peak is: just a few hertz wide on a frequency of 429 trillion
-                  hertz. That sharpness is what makes optical clocks so precise.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 04 OPTICAL ============ -->
-    <section class="section section-alt" id="optical" aria-labelledby="optical-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="kicker">Chapter 04</span>
-          <h2 id="optical-title">Why go optical?</h2>
-          <p>Today's official second is defined by caesium atoms, probed with microwaves. Optical clocks use visible
-            light instead, which oscillates tens of thousands of times faster.</p>
-        </div>
-
-        <div class="versus reveal">
-          <article class="card vs-card">
-            <span class="tag">Microwave clock · caesium-133</span>
-            <div class="big">9.19 GHz</div>
-            <p style="color:var(--text-muted);margin:0">9.2 billion ticks per second</p>
-            <svg class="vs-wave" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M0 30 C25 0 50 0 75 30 S125 60 150 30 S200 0 225 30 S275 60 300 30 S350 0 375 30 S400 45 400 45"
-                stroke="#8b5cf6" />
-            </svg>
-            <ul>
-              <li>Defines the SI second since 1967</li>
-              <li>Best fountain clocks: ~1 part in 10<sup>16</sup></li>
-              <li>Loses 1 second in ~300 million years</li>
-            </ul>
-          </article>
-          <article class="card vs-card optical">
-            <span class="tag">Optical clock · strontium-87</span>
-            <div class="big">429 THz</div>
-            <p style="color:var(--text-muted);margin:0">429 trillion ticks per second · red light, 698 nm</p>
-            <svg class="vs-wave" viewBox="0 0 400 60" preserveAspectRatio="none" aria-hidden="true">
-              <path id="optical-wave-path" stroke="#ef4f5a" />
-            </svg>
-            <ul>
-              <li>~47,000× more ticks per second than caesium</li>
-              <li>Best clocks: below 1 part in 10<sup>18</sup></li>
-              <li>Would lose 1 second in ~40 billion years</li>
-            </ul>
-          </article>
-        </div>
-
-        <div class="ruler-demo reveal">
-          <h3 style="font-size:1.25rem">The ruler analogy</h3>
-          <p style="color:var(--text-muted)">Measuring time with a faster oscillator is like measuring length with a
-            ruler that has finer markings. Both rulers below are the same length; one is just divided far more finely.
-          </p>
-          <div class="ruler-row">
-            <h4>Coarse ruler — like a microwave clock</h4>
-            <div class="ruler" id="ruler-coarse" aria-hidden="true"></div>
-          </div>
-          <div class="ruler-row">
-            <h4>Fine ruler — like an optical clock</h4>
-            <div class="ruler fine" id="ruler-fine" aria-hidden="true"></div>
-            <div class="ruler-label"><span>Same length</span><span>Many more divisions → more precise readings</span>
-            </div>
-          </div>
-          <div class="callout">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z" />
-            </svg>
-            <p>Physicists call this the <strong>quality factor</strong>: the clock frequency divided by the width of the
-              resonance. Higher frequency plus a razor-thin resonance gives optical clocks a quality factor in the
-              hundreds of trillions.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 05 INSIDE ============ -->
-    <section class="section" id="inside" aria-labelledby="inside-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="kicker">Chapter 05</span>
-          <h2 id="inside-title">Inside an optical lattice clock</h2>
-          <p>An optical clock fills a laboratory table with lasers, mirrors and vacuum chambers. Its job comes down to
-            four steps, repeated around once a second.</p>
-        </div>
-
-        <div class="steps">
-          <article class="step reveal">
-            <div class="step-visual" aria-hidden="true">
-              <svg viewBox="0 0 200 150">
-                <g opacity="0.85">
-                  <rect class="beam-pulse" x="0" y="70" width="200" height="10" fill="#ef4f5a" opacity="0.5" rx="5" />
-                  <rect class="beam-pulse" x="95" y="0" width="10" height="150" fill="#ef4f5a" opacity="0.5" rx="5"
-                    style="animation-delay:-0.8s" />
-                </g>
-                <g fill="#7c3aed">
-                  <circle class="cool-atom" cx="88" cy="66" r="4" />
-                  <circle class="cool-atom" cx="110" cy="70" r="4" />
-                  <circle class="cool-atom" cx="98" cy="84" r="4" />
-                  <circle class="cool-atom" cx="104" cy="60" r="4" />
-                  <circle class="cool-atom" cx="92" cy="78" r="4" />
-                  <circle class="cool-atom" cx="115" cy="82" r="4" />
-                  <circle class="cool-atom" cx="84" cy="88" r="4" />
-                  <circle class="cool-atom" cx="100" cy="72" r="4" />
-                </g>
-                <text x="100" y="140" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.6">laser
-                  cooling</text>
-              </svg>
-            </div>
-            <div class="step-body">
-              <span class="step-num">Step 1</span>
-              <h3>Cool the atoms</h3>
-              <p>A cloud of strontium atoms is hit from all sides by laser beams that act like a thick molasses, slowing
-                them until they're just millionths of a degree above absolute zero.</p>
-              <p class="fact">≈ 0.000001 °C above −273.15 °C</p>
-            </div>
-          </article>
-
-          <article class="step reveal">
-            <div class="step-visual" aria-hidden="true">
-              <svg viewBox="0 0 200 150">
-                <path d="M10 80 q10 -26 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" fill="none"
-                  stroke="#ef4f5a" stroke-width="2" opacity="0.7" />
-                <path d="M10 80 q10 26 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" fill="none"
-                  stroke="#ef4f5a" stroke-width="1" opacity="0.3" />
-                <g fill="#7c3aed">
-                  <circle class="lattice-bob" cx="20" cy="72" r="4.5" />
-                  <circle class="lattice-bob" cx="40" cy="88" r="4.5" />
-                  <circle class="lattice-bob" cx="60" cy="72" r="4.5" />
-                  <circle class="lattice-bob" cx="80" cy="88" r="4.5" />
-                  <circle class="lattice-bob" cx="100" cy="72" r="4.5" />
-                  <circle class="lattice-bob" cx="120" cy="88" r="4.5" />
-                  <circle class="lattice-bob" cx="140" cy="72" r="4.5" />
-                  <circle class="lattice-bob" cx="160" cy="88" r="4.5" />
-                  <circle class="lattice-bob" cx="180" cy="72" r="4.5" />
-                </g>
-                <text x="100" y="140" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.6">optical
-                  lattice · 813 nm</text>
-              </svg>
-            </div>
-            <div class="step-body">
-              <span class="step-num">Step 2</span>
-              <h3>Trap them in light</h3>
-              <p>The cold atoms are loaded into an "optical lattice": criss-crossing laser beams that form an egg-carton
-                of light, holding thousands of atoms still so they can't drift or collide.</p>
-              <p class="fact">"Magic" wavelength: 813 nm</p>
-            </div>
-          </article>
-
-          <article class="step reveal">
-            <div class="step-visual" aria-hidden="true">
-              <svg viewBox="0 0 200 150">
-                <rect x="20" y="50" width="54" height="40" rx="8" fill="none" stroke="currentColor"
-                  stroke-opacity="0.45" stroke-width="2" />
-                <line x1="28" y1="70" x2="66" y2="70" stroke="#ef4f5a" stroke-width="2" stroke-dasharray="4 3" />
-                <text x="47" y="106" text-anchor="middle" font-size="9" fill="currentColor" opacity="0.6">cavity</text>
-                <rect class="probe-glow" x="74" y="66" width="80" height="8" fill="#ef4f5a" rx="4" />
-                <g fill="#7c3aed">
-                  <circle cx="160" cy="62" r="4.5" />
-                  <circle cx="172" cy="70" r="4.5" />
-                  <circle cx="160" cy="78" r="4.5" />
-                  <circle cx="178" cy="82" r="4.5" />
-                  <circle cx="176" cy="58" r="4.5" />
-                </g>
-                <text x="100" y="140" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.6">clock laser
-                  · 698 nm</text>
-              </svg>
-            </div>
-            <div class="step-body">
-              <span class="step-num">Step 3</span>
-              <h3>Probe with an ultra-stable laser</h3>
-              <p>A red "clock laser", stabilised against a vibration-isolated mirror cavity, shines on the atoms. A
-                feedback loop keeps it tuned exactly to the atoms' resonance.</p>
-              <p class="fact">Linewidth: less than 1 Hz</p>
-            </div>
-          </article>
-
-          <article class="step reveal">
-            <div class="step-visual" aria-hidden="true">
-              <svg viewBox="0 0 200 150">
-                <line x1="15" y1="110" x2="185" y2="110" stroke="currentColor" stroke-opacity="0.45"
-                  stroke-width="1.5" />
-                <g fill="#8b5cf6">
-                  <rect class="comb-tooth" x="22" y="50" width="4" height="60" rx="2" style="animation-delay:0s" />
-                  <rect class="comb-tooth" x="40" y="40" width="4" height="70" rx="2" style="animation-delay:-0.2s" />
-                  <rect class="comb-tooth" x="58" y="32" width="4" height="78" rx="2" style="animation-delay:-0.4s" />
-                  <rect class="comb-tooth" x="76" y="28" width="4" height="82" rx="2" style="animation-delay:-0.6s" />
-                  <rect class="comb-tooth" x="94" y="26" width="4" height="84" rx="2" style="animation-delay:-0.8s" />
-                  <rect class="comb-tooth" x="130" y="28" width="4" height="82" rx="2" style="animation-delay:-1.2s" />
-                  <rect class="comb-tooth" x="148" y="34" width="4" height="76" rx="2" style="animation-delay:-1.4s" />
-                  <rect class="comb-tooth" x="166" y="44" width="4" height="66" rx="2" style="animation-delay:-1.6s" />
-                </g>
-                <rect x="111" y="14" width="5" height="96" rx="2.5" fill="#ef4f5a" />
-                <text x="100" y="140" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.6">frequency
-                  comb</text>
-              </svg>
-            </div>
-            <div class="step-body">
-              <span class="step-num">Step 4</span>
-              <h3>Count the ticks</h3>
-              <p>No electronics can count 429 trillion cycles a second directly. A "frequency comb" — a laser producing
-                evenly spaced colours like the teeth of a comb — acts as a gearbox, converting optical ticks into
-                countable radio frequencies.</p>
-              <p class="fact">Nobel Prize in Physics, 2005</p>
-            </div>
-          </article>
-        </div>
-
-        <div class="ion-note">
-          <div class="card reveal">
-            <h3>Lattice clocks</h3>
-            <p style="color:var(--text-muted);margin:0">Use <strong>thousands of neutral atoms</strong> (strontium or
-              ytterbium) at once. Measuring many atoms together averages out noise, so lattice clocks reach high
-              precision quickly.</p>
-          </div>
-          <div class="card reveal">
-            <h3>Trapped-ion clocks</h3>
-            <p style="color:var(--text-muted);margin:0">Use <strong>a single charged atom</strong> (such as aluminium or
-              ytterbium) held by electric fields. One isolated ion is exceptionally well shielded from disturbances.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 06 PRECISION ============ -->
-    <section class="section section-alt" id="precision" aria-labelledby="precision-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="kicker">Chapter 06</span>
-          <h2 id="precision-title">How precise is "precise"?</h2>
-          <p>A good way to picture a clock's accuracy is to ask: <em>how long before it gains or loses one whole
-              second?</em> Each bar below is ten times longer for every extra zero of precision.</p>
-        </div>
-
-        <div class="lab reveal">
-          <div class="lab-head">
-            <h3 class="lab-title"><span class="lab-badge">Lab 3</span> Time to drift by one second</h3>
-            <span class="mono" style="font-size:0.8rem;color:var(--text-muted)">logarithmic scale</span>
-          </div>
-          <div class="lab-body">
-            <div class="chart" id="precision-chart"></div>
-          </div>
-        </div>
-
-        <div class="age-compare reveal">
-          <div class="big">~3×</div>
-          <p>The best optical clocks would take roughly <strong>40 billion years</strong> to drift by a single second —
-            around three times the <strong>13.8-billion-year</strong> age of the universe.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 07 GRAVITY ============ -->
-    <section class="section" id="gravity" aria-labelledby="gravity-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="kicker">Chapter 07</span>
-          <h2 id="gravity-title">Clocks that can feel gravity</h2>
-          <p>Einstein predicted that time runs slower closer to a massive object. Optical clocks are now so precise they
-            can measure this effect when one clock sits just a centimetre higher than another.</p>
-        </div>
-
-        <div class="two-col">
-          <div class="prose reveal">
-            <p>According to general relativity, <strong>gravity slows time</strong>. A clock in your basement ticks very
-              slightly slower than one in your attic. For everyday life the difference is absurdly small — but it's
-              real, and it's measurable.</p>
-            <p>Raise a clock by one metre near Earth's surface and it runs faster by about <strong>one part in
-                10<sup>16</sup></strong>. Caesium clocks can barely sense that. Optical clocks can detect height
-              differences of a <strong>centimetre or less</strong>.</p>
-            <p>GPS has to account for this too: satellite clocks run about <strong>38 microseconds per day</strong> fast
-              compared with clocks on the ground (gravity and their orbital speed combined). Left uncorrected, GPS
-              positions would drift by roughly 10 km every day.</p>
-            <div class="callout">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M3 20h18L12 4z" />
-                <path d="M12 10v4M12 17h.01" />
-              </svg>
-              <p>This turns clocks into a new kind of instrument: <strong>"relativistic geodesy"</strong>, measuring
-                height and Earth's shape by comparing clock rates.</p>
-            </div>
-          </div>
-
-          <div class="lab reveal" id="gravity-lab">
-            <div class="lab-head">
-              <h3 class="lab-title"><span class="lab-badge">Lab 4</span> Raise the clock</h3>
-            </div>
-            <div class="lab-body">
-              <div class="gravity-visual" aria-hidden="true">
-                <div class="g-clock g-low">
-                  <div class="face"></div>Ground
-                </div>
-                <div class="g-height-line" id="g-line"></div>
-                <span class="g-height-label" id="g-label">1 m</span>
-                <div class="g-clock g-high high" id="g-high">
-                  <div class="face"></div>Raised
-                </div>
-                <div class="gravity-ground"></div>
-              </div>
-              <div class="control">
-                <div class="control-row">
-                  <label for="height-slider">Height difference</label>
-                  <output id="height-out" for="height-slider">1 m</output>
-                </div>
-                <input type="range" id="height-slider" min="0" max="600" value="200" step="1">
-              </div>
-              <div class="chips" role="group" aria-label="Height presets">
-                <button class="chip" type="button" data-h="0.01" id="preset-cm">1 cm step</button>
-                <button class="chip" type="button" data-h="1" id="preset-table" aria-pressed="true">1 m table</button>
-                <button class="chip" type="button" data-h="828" id="preset-burj">Burj Khalifa</button>
-                <button class="chip" type="button" data-h="8849" id="preset-everest">Mt Everest</button>
-              </div>
-              <div class="readouts">
-                <div class="readout highlight"><span class="r-label">Raised clock runs fast by</span><span
-                    class="r-value" id="g-frac">1.1 × 10⁻¹⁶</span></div>
-                <div class="readout"><span class="r-label">Gain over a lifetime (80 yrs)</span><span class="r-value"
-                    id="g-life">275 ns</span></div>
-              </div>
-              <div class="detect" aria-live="polite">
-                <div class="detect-row"><span>Detectable by a caesium clock (10⁻¹⁶)?</span><span class="pill"
-                    id="det-cs">—</span></div>
-                <div class="detect-row"><span>Detectable by an optical clock (10⁻¹⁸)?</span><span class="pill"
-                    id="det-opt">—</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 08 FUTURE ============ -->
-    <section class="section section-alt" id="future" aria-labelledby="future-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="kicker">Chapter 08</span>
-          <h2 id="future-title">What will we do with better clocks?</h2>
-          <p>Every leap in timekeeping has unlocked technology nobody anticipated. Here's what optical clocks could
-            bring.</p>
-        </div>
-        <div class="app-grid">
-          <article class="feature wide reveal">
-            <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="9" />
-                <path d="M12 7v5l3 2" />
-              </svg></div>
-            <h3>Redefining the second</h3>
-            <p>Optical clocks already outperform the caesium standard by around 100 times. Metrologists have set out a
-              roadmap to redefine the SI second using optical transitions, with a decision targeted for around 2030. It
-              would be the first change to the definition since 1967.</p>
-          </article>
-          <article class="feature reveal">
-            <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m8 3 4 8 5-5 5 15H2z" />
-              </svg></div>
-            <h3>Mapping Earth</h3>
-            <p>Clocks that sense centimetre height changes could monitor sea levels, volcanoes and groundwater by
-              detecting tiny shifts in gravity.</p>
-          </article>
-          <article class="feature reveal">
-            <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="3" />
-                <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
-              </svg></div>
-            <h3>Hunting dark matter</h3>
-            <p>If invisible dark matter nudges the constants of nature, networks of clocks might catch it as tiny,
-              correlated ticking changes.</p>
-          </article>
-          <article class="feature reveal">
-            <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 11l19-9-9 19-2-8z" />
-              </svg></div>
-            <h3>Resilient navigation</h3>
-            <p>Portable optical clocks on ships, aircraft and satellites could keep accurate time when GPS signals are
-              jammed or unavailable.</p>
-          </article>
-          <article class="feature reveal">
-            <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M2 12c2.5-4 5.5-4 8 0s5.5 4 8 0 3-3 4-2" />
-                <path d="M2 17c2.5-4 5.5-4 8 0s5.5 4 8 0" />
-              </svg></div>
-            <h3>Gravitational waves</h3>
-            <p>Proposed space-based clock networks could detect ripples in spacetime at frequencies today's detectors
-              can't reach.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ QUIZ ============ -->
-    <section class="section" id="quiz" aria-labelledby="quiz-title">
-      <div class="container">
-        <div class="section-head center reveal">
-          <span class="kicker">Check your understanding</span>
-          <h2 id="quiz-title">Quick quiz</h2>
-          <p>Six questions to consolidate what you've learned. No pressure: every answer comes with an explanation.</p>
-        </div>
-        <div class="card quiz reveal" id="quiz-card" aria-live="polite"></div>
-      </div>
-    </section>
-
-    <!-- ============ GLOSSARY ============ -->
-    <section class="section section-alt" id="glossary" aria-labelledby="glossary-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="kicker">Reference</span>
-          <h2 id="glossary-title">Glossary</h2>
-          <p>Key terms in plain English.</p>
-        </div>
-        <div class="glossary reveal">
-          <details>
-            <summary>Frequency</summary>
-            <p>How many times something repeats per second, measured in hertz (Hz). 1 THz (terahertz) is a trillion
-              hertz.</p>
-          </details>
-          <details>
-            <summary>Oscillator</summary>
-            <p>Anything that repeats at a steady rate — the "pendulum" of a clock. In optical clocks, it's a laser
-              locked to atoms.</p>
-          </details>
-          <details>
-            <summary>Resonance</summary>
-            <p>The specific frequency at which a system responds most strongly. Atoms only absorb light at their
-              resonant frequencies.</p>
-          </details>
-          <details>
-            <summary>Fractional uncertainty</summary>
-            <p>How far a clock might be off relative to its frequency. 10⁻¹⁸ means an error of one part in a billion
-              billion.</p>
-          </details>
-          <details>
-            <summary>Laser cooling</summary>
-            <p>Using carefully tuned laser light to slow atoms down, chilling them to within millionths of a degree of
-              absolute zero.</p>
-          </details>
-          <details>
-            <summary>Optical lattice</summary>
-            <p>A grid of light formed by overlapping laser beams, which traps atoms in a regular pattern like eggs in a
-              carton.</p>
-          </details>
-          <details>
-            <summary>Magic wavelength</summary>
-            <p>A lattice laser colour chosen so that trapping the atoms shifts both clock energy levels equally, leaving
-              the ticking rate undisturbed.</p>
-          </details>
-          <details>
-            <summary>Frequency comb</summary>
-            <p>A laser whose light consists of thousands of evenly spaced colours. It links optical frequencies to
-              countable radio frequencies.</p>
-          </details>
-          <details>
-            <summary>Quality factor (Q)</summary>
-            <p>Resonant frequency divided by resonance width. A higher Q means a sharper, more precisely defined tick.
-            </p>
-          </details>
-          <details>
-            <summary>Gravitational redshift</summary>
-            <p>The slowing of time deeper in a gravitational field. Clocks lower down tick slower than clocks higher up.
-            </p>
-          </details>
-        </div>
+        <a class="pager-link next" href="clocks.html">
+          <span class="pager-dir">
+            Next
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </span>
+          <span class="pager-title">Part 02: Clocks & Atoms</span>
+          <span class="pager-sub">What is a clock, history, & atomic resonance</span>
+        </a>
+        </nav>
+        <p class="pager-count">Part 1 of 7 in The Science of Tick-Tock</p>
       </div>
     </section>
   </main>
@@ -961,7 +337,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <a class="brand" href="#top" id="footer-brand">
+          <a class="brand" href="index.html" id="footer-brand">
             <span class="brand-mark" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
                 stroke="#fff" stroke-width="1.8">
                 <circle cx="12" cy="12" r="2.2" fill="#fff" />

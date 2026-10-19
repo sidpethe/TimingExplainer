@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precision, Gravity & Future — The Science of Tick-Tock</title>
+  <meta name="description" content="Explore how optical clocks measure gravitational time dilation over centimetres, and how metrologists plan to redefine the SI second.">
+  <meta name="theme-color" content="#7c3aed">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%237c3aed'/%3E%3Ccircle cx='16' cy='16' r='3' fill='white'/%3E%3Cellipse cx='16' cy='16' rx='11' ry='4.5' fill='none' stroke='white' stroke-width='1.6'/%3E%3Cellipse cx='16' cy='16' rx='11' ry='4.5' fill='none' stroke='white' stroke-width='1.6' transform='rotate(60 16 16)'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Apply theme before paint to avoid a flash.
+    (function () {
+      document.documentElement.classList.remove('no-js');
+      var saved = localStorage.getItem('theme');
+      var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (dark) document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" id="brand-link">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8">
+            <circle cx="12" cy="12" r="2.2" fill="#fff" />
+            <ellipse cx="12" cy="12" rx="9" ry="3.6" />
+            <ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(60 12 12)" />
+            <ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(120 12 12)" />
+          </svg>
+        </span>
+        The Science of Tick-Tock
+      </a>
+      <nav class="main-nav" aria-label="Chapters">
+        <ul>
+          <li><a href="index.html">Why</a></li>
+          <li><a href="clocks.html">Clocks</a></li>
+          <li><a href="optical.html">Optical</a></li>
+          <li><a href="precision.html" aria-current="page">Precision</a></li>
+          <li><a href="sync.html">Losing Sync<span class="nav-new">New</span></a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="progress" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+    <!-- ============ PAGE HERO ============ -->
+    <section class="hero page-hero" id="top" aria-labelledby="page-title">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow"><span class="dot" aria-hidden="true"></span>Part 04 · Extreme Precision & General Relativity</span>
+          <h1 id="page-title">Clocks that drift once in <span class="grad">40 billion years</span></h1>
+          <p class="lead">The world's best optical atomic clocks are so sensitive they can detect Einstein's gravitational time dilation when raised by just a single centimetre. Discover what this unlocks for science.</p>
+          <div class="page-progress" aria-hidden="true">
+            <span class="done"></span><span class="done"></span><span class="done"></span><span class="current"></span><span></span><span></span><span></span>
+          </div>
+          <span class="page-progress-label">Part 4 of 7</span>
+        </div>
+        <div class="toc-card" aria-label="On this page">
+          <div class="label">On this page</div>
+          <ol>
+              <li><a href="#precision"><span class="toc-num">06</span><span>How precise is "precise"?<small>Lab 3: Time to drift by 1 second chart</small></span></a></li>
+              <li><a href="#gravity"><span class="toc-num">07</span><span>Clocks that feel gravity<small>General relativity & Lab 4: Raise the clock</small></span></a></li>
+              <li><a href="#future"><span class="toc-num">08</span><span>What comes next?<small>Redefining the second, geodesy & dark matter</small></span></a></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+<section class="section section-alt" id="precision" aria-labelledby="precision-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Chapter 06</span>
+          <h2 id="precision-title">How precise is "precise"?</h2>
+          <p>A good way to picture a clock's accuracy is to ask: <em>how long before it gains or loses one whole
+              second?</em> Each bar below is ten times longer for every extra zero of precision.</p>
+        </div>
+
+        <div class="lab reveal">
+          <div class="lab-head">
+            <h3 class="lab-title"><span class="lab-badge">Lab 3</span> Time to drift by one second</h3>
+            <span class="mono" style="font-size:0.8rem;color:var(--text-muted)">logarithmic scale</span>
+          </div>
+          <div class="lab-body">
+            <div class="chart" id="precision-chart"></div>
+          </div>
+        </div>
+
+        <div class="age-compare reveal">
+          <div class="big">~3×</div>
+          <p>The best optical clocks would take roughly <strong>40 billion years</strong> to drift by a single second —
+            around three times the <strong>13.8-billion-year</strong> age of the universe.</p>
+        </div>
+      </div>
+    </section>
+<section class="section" id="gravity" aria-labelledby="gravity-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Chapter 07</span>
+          <h2 id="gravity-title">Clocks that can feel gravity</h2>
+          <p>Einstein predicted that time runs slower closer to a massive object. Optical clocks are now so precise they
+            can measure this effect when one clock sits just a centimetre higher than another.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="prose reveal">
+            <p>According to general relativity, <strong>gravity slows time</strong>. A clock in your basement ticks very
+              slightly slower than one in your attic. For everyday life the difference is absurdly small — but it's
+              real, and it's measurable.</p>
+            <p>Raise a clock by one metre near Earth's surface and it runs faster by about <strong>one part in
+                10<sup>16</sup></strong>. Caesium clocks can barely sense that. Optical clocks can detect height
+              differences of a <strong>centimetre or less</strong>.</p>
+            <p>GPS has to account for this too: satellite clocks run about <strong>38 microseconds per day</strong> fast
+              compared with clocks on the ground (gravity and their orbital speed combined). Left uncorrected, GPS
+              positions would drift by roughly 10 km every day.</p>
+            <div class="callout">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M3 20h18L12 4z" />
+                <path d="M12 10v4M12 17h.01" />
+              </svg>
+              <p>This turns clocks into a new kind of instrument: <strong>"relativistic geodesy"</strong>, measuring
+                height and Earth's shape by comparing clock rates.</p>
+            </div>
+          </div>
+
+          <div class="lab reveal" id="gravity-lab">
+            <div class="lab-head">
+              <h3 class="lab-title"><span class="lab-badge">Lab 4</span> Raise the clock</h3>
+            </div>
+            <div class="lab-body">
+              <div class="gravity-visual" aria-hidden="true">
+                <div class="g-clock g-low">
+                  <div class="face"></div>Ground
+                </div>
+                <div class="g-height-line" id="g-line"></div>
+                <span class="g-height-label" id="g-label">1 m</span>
+                <div class="g-clock g-high high" id="g-high">
+                  <div class="face"></div>Raised
+                </div>
+                <div class="gravity-ground"></div>
+              </div>
+              <div class="control">
+                <div class="control-row">
+                  <label for="height-slider">Height difference</label>
+                  <output id="height-out" for="height-slider">1 m</output>
+                </div>
+                <input type="range" id="height-slider" min="0" max="600" value="200" step="1">
+              </div>
+              <div class="chips" role="group" aria-label="Height presets">
+                <button class="chip" type="button" data-h="0.01" id="preset-cm">1 cm step</button>
+                <button class="chip" type="button" data-h="1" id="preset-table" aria-pressed="true">1 m table</button>
+                <button class="chip" type="button" data-h="828" id="preset-burj">Burj Khalifa</button>
+                <button class="chip" type="button" data-h="8849" id="preset-everest">Mt Everest</button>
+              </div>
+              <div class="readouts">
+                <div class="readout highlight"><span class="r-label">Raised clock runs fast by</span><span
+                    class="r-value" id="g-frac">1.1 × 10⁻¹⁶</span></div>
+                <div class="readout"><span class="r-label">Gain over a lifetime (80 yrs)</span><span class="r-value"
+                    id="g-life">275 ns</span></div>
+              </div>
+              <div class="detect" aria-live="polite">
+                <div class="detect-row"><span>Detectable by a caesium clock (10⁻¹⁶)?</span><span class="pill"
+                    id="det-cs">—</span></div>
+                <div class="detect-row"><span>Detectable by an optical clock (10⁻¹⁸)?</span><span class="pill"
+                    id="det-opt">—</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<section class="section section-alt" id="future" aria-labelledby="future-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Chapter 08</span>
+          <h2 id="future-title">What will we do with better clocks?</h2>
+          <p>Every leap in timekeeping has unlocked technology nobody anticipated. Here's what optical clocks could
+            bring.</p>
+        </div>
+        <div class="app-grid">
+          <article class="feature wide reveal">
+            <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3 2" />
+              </svg></div>
+            <h3>Redefining the second</h3>
+            <p>Optical clocks already outperform the caesium standard by around 100 times. Metrologists have set out a
+              roadmap to redefine the SI second using optical transitions, with a decision targeted for around 2030. It
+              would be the first change to the definition since 1967.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m8 3 4 8 5-5 5 15H2z" />
+              </svg></div>
+            <h3>Mapping Earth</h3>
+            <p>Clocks that sense centimetre height changes could monitor sea levels, volcanoes and groundwater by
+              detecting tiny shifts in gravity.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
+              </svg></div>
+            <h3>Hunting dark matter</h3>
+            <p>If invisible dark matter nudges the constants of nature, networks of clocks might catch it as tiny,
+              correlated ticking changes.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 11l19-9-9 19-2-8z" />
+              </svg></div>
+            <h3>Resilient navigation</h3>
+            <p>Portable optical clocks on ships, aircraft and satellites could keep accurate time when GPS signals are
+              jammed or unavailable.</p>
+          </article>
+          <article class="feature reveal">
+            <div class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12c2.5-4 5.5-4 8 0s5.5 4 8 0 3-3 4-2" />
+                <path d="M2 17c2.5-4 5.5-4 8 0s5.5 4 8 0" />
+              </svg></div>
+            <h3>Gravitational waves</h3>
+            <p>Proposed space-based clock networks could detect ripples in spacetime at frequencies today's detectors
+              can't reach.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ============ PAGER ============ -->
+    <section class="pager-section">
+      <div class="container">
+        <nav class="pager" aria-label="Guide pagination">
+        <a class="pager-link prev" href="optical.html">
+          <span class="pager-dir">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            Previous
+          </span>
+          <span class="pager-title">Part 03: Optical Standards</span>
+          <span class="pager-sub">Why visible light beats microwaves</span>
+        </a>
+        <a class="pager-link next" href="sync.html">
+          <span class="pager-dir">
+            Next
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </span>
+          <span class="pager-title">Part 05: Losing Sync (5G)</span>
+          <span class="pager-sub">Interactive simulations of network clock failure</span>
+        </a>
+        </nav>
+        <p class="pager-count">Part 4 of 7 in The Science of Tick-Tock</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" id="footer-brand">
+            <span class="brand-mark" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="#fff" stroke-width="1.8">
+                <circle cx="12" cy="12" r="2.2" fill="#fff" />
+                <ellipse cx="12" cy="12" rx="9" ry="3.6" />
+                <ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(60 12 12)" />
+                <ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(120 12 12)" />
+              </svg></span>
+            The Science of Tick-Tock
+          </a>
+          <p style="margin-top:1rem;max-width:32em">An educational explainer on precision timing and optical atomic
+            clocks. Figures are rounded for clarity; see the further reading for precise values.</p>
+        </div>
+        <div>
+          <h2>Further reading</h2>
+          <ul>
+            <li><a href="https://www.nist.gov/atomic-clocks" rel="noopener" target="_blank">NIST — Atomic clocks</a>
+            </li>
+            <li><a href="https://www.bipm.org/en/si-base-units/second" rel="noopener" target="_blank">BIPM — The SI
+                second</a></li>
+            <li><a href="https://www.npl.co.uk/time" rel="noopener" target="_blank">National Physical Laboratory —
+                Time</a></li>
+            <li><a href="https://www.nobelprize.org/prizes/physics/2005/summary/" rel="noopener" target="_blank">Nobel
+                Prize 2005 — Frequency comb</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">Made for curious minds. Strontium tick rate: 429,228,004,229,873 Hz.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+
+  <!-- Vercel Web Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <!-- Vercel Speed Insights -->
+  <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+</body>
+
+</html>
