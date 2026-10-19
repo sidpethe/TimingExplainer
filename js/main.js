@@ -1,5 +1,6 @@
 /* ==========================================================================
    The Science of Now — interactions
+   Shared by every page; each module exits early if its markup is absent.
    ========================================================================== */
 (() => {
   'use strict';
@@ -94,6 +95,8 @@
     else root.removeAttribute('data-theme');
     localStorage.setItem('theme', dark ? 'dark' : 'light');
     themeListeners.forEach((fn) => fn());
+    // Let page-specific scripts (e.g. sync.js) redraw with the new palette.
+    document.dispatchEvent(new CustomEvent('themechange'));
   });
 
   /* ---------- Header state + active nav ---------- */
@@ -113,14 +116,7 @@
     update();
   }
 
-  const navLinks = $$('.main-nav a');
-  const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      navLinks.forEach((a) => a.classList.toggle('is-active', a.getAttribute('href') === `#${entry.target.id}`));
-    });
-  }, { rootMargin: '-45% 0px -50% 0px' });
-  $$('main > section[id]').forEach((s) => sectionObserver.observe(s));
+  // The current page is marked in the nav with aria-current="page" in each HTML file.
 
   /* ---------- Reveal on scroll ---------- */
   const revealObserver = new IntersectionObserver((entries) => {
@@ -136,6 +132,7 @@
   /* ---------- Hero: tick counter ---------- */
   (() => {
     const out = $('#tick-counter');
+    if (!out) return;
     const start = performance.now();
     let last = 0;
     const update = (now) => {
@@ -153,6 +150,7 @@
   /* ---------- Lab 1: GPS error ---------- */
   (() => {
     const slider = $('#gps-slider');
+    if (!slider) return;
     const errOut = $('#gps-error-out');
     const distOut = $('#gps-dist');
     const cmpOut = $('#gps-compare');
@@ -188,8 +186,9 @@
 
   /* ---------- Oscillator comparison ---------- */
   (() => {
-    const rows = $$('#osc-list .osc-row');
     const list = $('#osc-list');
+    if (!list) return;
+    const rows = $$('.osc-row', list);
     let colors = {};
     const readColors = () => {
       colors = { primary: css('--primary'), laser: css('--laser'), grid: css('--border') };
@@ -234,6 +233,7 @@
   /* ---------- Lab 2: resonance tuner ---------- */
   (() => {
     const canvas = $('#resonance-canvas');
+    if (!canvas) return;
     const slider = $('#detune-slider');
     const out = $('#detune-out');
     const excitedOut = $('#excited-out');
@@ -382,6 +382,7 @@
   /* ---------- Optical wave + rulers ---------- */
   (() => {
     const path = $('#optical-wave-path');
+    if (!path) return;
     const cycles = 40, w = 400, mid = 30, amp = 26;
     let d = `M0 ${mid}`;
     for (let x = 0; x <= w; x += 1) d += ` L${x} ${(mid - amp * Math.sin((x / w) * cycles * Math.PI * 2)).toFixed(2)}`;
@@ -414,6 +415,7 @@
       { name: 'Optical lattice clock', note: '2024 · strontium, JILA', u: 8e-19, optical: true },
     ];
     const chart = $('#precision-chart');
+    if (!chart) return;
     const minLog = 1.5, maxLog = 18.4;
 
     data.forEach((item) => {
@@ -442,6 +444,8 @@
 
   /* ---------- Lab 4: gravity ---------- */
   (() => {
+    const lab = $('#gravity-lab');
+    if (!lab) return;
     const slider = $('#height-slider');
     const out = $('#height-out');
     const fracOut = $('#g-frac');
@@ -451,7 +455,7 @@
     const high = $('#g-high');
     const line = $('#g-line');
     const label = $('#g-label');
-    const chips = $$('.chips .chip');
+    const chips = $$('.chips .chip', lab);
 
     const sliderToH = (v) => 10 ** (-2 + v / 100);
     const hToSlider = (h) => (Math.log10(h) + 2) * 100;
@@ -557,9 +561,21 @@
         a: 1,
         why: 'General relativity says time runs faster farther from a mass. The effect is tiny, around 10⁻¹⁶ per metre, but optical clocks can detect height differences of a centimetre.',
       },
+      {
+        q: 'GPS is jammed near a cluster of 5G towers. What decides how long the network keeps working normally?',
+        options: [
+          'How tall the towers are',
+          'How many phones are connected',
+          'How slowly each tower\'s backup ("holdover") clock drifts away from true time',
+          'Nothing: 5G towers don\'t need to agree on the time',
+        ],
+        a: 2,
+        why: 'Neighbouring 5G towers must stay within about 3 µs of each other. Quartz backups drift past that in hours; a portable optical clock drifting ~1 ns a day could hold the line for years.',
+      },
     ];
 
     const card = $('#quiz-card');
+    if (!card) return;
     let index = 0;
     let score = 0;
 
@@ -612,7 +628,7 @@
     const renderResult = () => {
       const msg = score === questions.length
         ? 'Perfect score. You could explain optical clocks at a dinner party.'
-        : score >= 4
+        : score >= questions.length - 2
           ? 'Great work. You\'ve got a solid grasp of precision timing.'
           : 'Good start! Skim back through the chapters and try again.';
       card.innerHTML = `
